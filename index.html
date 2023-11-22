@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rainfall Prediction</title>
+</head>
+<body background="https://wallpaperaccess.com/full/701614.jpg" text="black">
+    <div class="login">
+        <h1 style="text-align: center;">Rainfall Prediction</h1>
+        <form action="/predict" method="post">
+            <label for="Location">Location:</label> 
+            <select id="Location" name="Location">
+
+                <option value=2>Albury</option>
+                
+                <option value=4>BadgerysCreek</option>
+                
+                <option value=10>Cobar</option>
+                
+                <option value=11>Coffs Harbour</option>
+                
+                <option value=21>Moree</option> 
+                
+                <option value=24>Newcastle</option>
+                
+                <option value=26>NorahHead</option>
+                
+                <option value=27>NorfolkIsland</option>
+                
+                <option value=30>Penrith</option> 
+                
+                <option value=34>Richmond</option>
+                
+                <option  value=37>Sydney</option>
+                
+                <option value=38>SydneyAirport</option>
+                
+                <option value=42>Waggawagga</option> 
+                
+                <option value=45>Williamtown</option>
+                
+                <option value=47>Wollongong</option> 
+                
+                <option value=9>Canberra</option>
+                
+                <option value=40>Tuggeranong</option> 
+                
+                <option value=23>Mountainini</option>
+                
+                <option value=5>Ballarat</option>
+                
+                <option value=6>Bendigo</option>
+                
+                <option value=35>Sale</option>
+
+            </select><br><br>
+                
+    
+            <label for="MinTemp">Min Temperature:</label>
+            <input type="text" id="MinTemp" name="MinTemp">
+    
+            <label for="MaxTemp">Max Temperature:</label>
+            <input type="text" id="MaxTemp" name="MaxTemp"><br><br>
+    
+            <label for="Rainfall">Rainfall:</label>
+            <input type="text" id="Rainfall" name="Rainfall">
+    
+            <label for="WindGustSpeed">Wind Gust Speed:</label>
+            <input type="text" id="WindGustSpeed" name="WindGustSpeed"><br><br>
+    
+            <label for="WindSpeed9am">Wind Speed 9am:</label>
+            <input type="text" id="WindSpeed9am" name="WindSpeed9am">
+    
+            <label for="WindSpeed3pm">Wind Speed 3pm:</label>
+            <input type="text" id="WindSpeed3pm" name="WindSpeed3pm"><br><br>
+    
+            <label for="Humidity9am">Humidity 9am:</label>
+            <input type="text" id="Humidity9am" name="Humidity9am">
+    
+            <label for="Humidity3pm">Humidity 3pm:</label>
+            <input type="text" id="Humidity3pm" name="Humidity3pm"><br><br>
+    
+            <label for="Pressure9am">Pressure 9am:</label>
+            <input type="text" id="Pressure9am" name="Pressure9am">
+    
+            <label for="Pressure3pm">Pressure 3pm:</label>
+            <input type="text" id="Pressure3pm" name="Pressure3pm"><br><br>
+    
+            <label for="Temp9am">Temperature 9am:</label>
+            <input type="text" id="Temp9am" name="Temp9am">
+    
+            <label for="Temp3pm">Temperature 3pm:</label>
+            <input type="text" id="Temp3pm" name="Temp3pm"><br><br>
+
+            <label for="year">Year:</label>
+            <input type="text" id="year" name="year">
+    
+            <label for="month">Month:</label>
+            <input type="text" id="month" name="month">
+    
+            <label for="day">Day:</label>
+            <input type="text" id="day" name="day"><br><br>
+
+            <label for="RainToday">Rain Today:</label> 
+            <select id="RainToday" name="RainToday">
+            <option value=>Yes</option>
+            <option value=>No</option>
+            </select>
+    
+            <label for="WindGustDir">Wind Gust Direction:</label> 
+            <select id="WindGustDir" name="WindGustDir">
+                <option value=14>W</option>
+
+                <option value=15></option>
+                
+                <option value=0>MSH</option> 
+                    
+                <option value=7>NE</option>
+                
+                <option value=13>MM</option>
+                
+                <option value=10>N</option>
+                
+                <option value=2>NNE</option>
+                
+                <option value=1>SW</option>
+                
+                <option value=6>ENE</option>
+                
+                <option value=11>SSE</option>
+                
+                <option value=12>S</option>
+                
+                <option value=9></option>
+                
+                <option value=3>SE</option>
+                
+                <option value=8>ESE</option>
+                
+                <option value=5>E</option>
+                
+                <option value=4>SSW</option> 
+            </select>
+    
+            <label for="WindDir9am">Wind Direction 9am:</label>
+            <select id="WindDir9am" name="WindDir9am">
+                <option value=14>W</option>
+
+                <option value=15></option>
+                
+                <option value=0>MSH</option> 
+                    
+                <option value=7>NE</option>
+                
+                <option value=13>MM</option>
+                
+                <option value=10>N</option>
+                
+                <option value=2>NNE</option>
+                
+                <option value=1>SW</option>
+                
+                <option value=6>ENE</option>
+                
+                <option value=11>SSE</option>
+                
+                <option value=12>S</option>
+                
+                <option value=9></option>
+                
+                <option value=3>SE</option>
+                
+                <option value=8>ESE</option>
+                
+                <option value=5>E</option>
+                
+                <option value=4>SSW</option> 
+            </select>
+    
+            <label for="WindDir3pm">Wind Direction 3pm:</label>
+            <select id="WindDir3pm" name="WindDir3pm">
+                <option value=14>W</option>
+                
+                <option value=0>MSH</option> 
+                    
+                <option value=7>NE</option>
+                
+                <option value=13>MM</option>
+                
+                <option value=10>N</option>
+                
+                <option value=2>NNE</option>
+                
+                <option value=1>SW</option>
+                
+                <option value=6>ENE</option>
+                
+                <option value=11>SSE</option>
+                
+                <option value=12>S</option>
+                
+                
+                <option value=3>SE</option>
+                
+                <option value=8>ESE</option>
+                
+                <option value=5>E</option>
+                
+                <option value=4>SSW</option> 
+            </select><br><br>
+    
+            
+    
+            <input type="submit" style="height: 30px; width: 200px;" value="Predict">
+        </form>
+        <br>
+        
+        <br><br>
+        <img src="data:image/png;base64, {{url_3}}" alt="Image 3" height="180" width="233" onerror="this.style.display='none'">
+        <img src="data:image/png;base64, {{url_1}}" alt="Image 1" height="180" width="233" onerror="this.style.display='none'">
+        <img src="data:image/png;base64, {{url_4}}" alt="Image 4" height="180" width="233" onerror="this.style.display='none'">
+        <br><br>
+        <img src="data:image/png;base64, {{url_2}}" alt="Image 2" height="150" width="711" onerror="this.style.display='none'">
+    </div>
+</body>
+</html>
